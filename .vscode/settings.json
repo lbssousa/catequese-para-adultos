@@ -1,0 +1,45 @@
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.wordWrap": "bounded",
+  "files.trimTrailingWhitespace": true,
+  "latex-workshop.linting.chktex.enabled": true,
+  "latex-workshop.linting.run": "onType",
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.kpsewhich.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.autoClean.run": "onFailed",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.latex.recipe.default": "latexmk",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.texdoc.args": [
+    "--view",
+    "--shell-escape"
+  ],
+  "latex-workshop.view.pdf.viewer": "tab"
+}
