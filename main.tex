@@ -1,0 +1,49 @@
+\documentclass[a4paper]{memoir}
+
+% Basic language and encoding
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{microtype}
+
+% Page and typography settings
+\setstocksize{24cm}{17cm}
+\settrimmedsize{24cm}{17cm}{*}
+\settrims{0pt}{0pt}
+\settypeblocksize{18.5cm}{12.5cm}{*}
+\setlrmargins{*}{*}{1.2}
+\setulmargins{*}{*}{1.2}
+\setheadfoot{12pt}{24pt}
+\checkandfixthelayout
+
+% Chapter style
+\chapterstyle{default}
+
+\title{Catequese para Adultos}
+\author{Laércio de Sousa}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+
+\input{frontmatter/prefacio}
+
+\mainmatter
+
+\part{Profissão de Fé}
+
+\input{chapters/01-profissao-de-fe-1}
+\input{chapters/02-profissao-de-fe-2}
+\input{chapters/03-profissao-de-fe-3}
+\input{chapters/04-profissao-de-fe-4}
+\input{chapters/05-profissao-de-fe-5}
+\input{chapters/06-profissao-de-fe-6}
+\input{chapters/07-profissao-de-fe-7}
+\input{chapters/08-profissao-de-fe-8}
+\input{chapters/09-profissao-de-fe-9}
+\input{chapters/10-profissao-de-fe-10}
+
+\backmatter
+\input{backmatter/conclusao}
+
+\end{document}
