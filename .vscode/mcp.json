@@ -1,8 +1,8 @@
 {
-	"servers": {
-		"magisterium": {
-			"url": "https://mcp.magisterium.com/",
-			"type": "sse",
-		}
-	}
+  "servers": {
+    "Magisterium": {
+      "url": "https://mcp.magisterium.com/",
+      "type": "sse",
+    }
+  }
 }
