@@ -1,33 +1,41 @@
-name: Build LaTeX
-
+name: "Principal"
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
+defaults:
+  run:
+    working-directory: .
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: main.tex
-          latexmk_use_lualatex: true
+      - name: Instalar Nix
+        uses: cachix/install-nix-action@v31
 
-      - name: Upload PDF artifact
+      - name: Exibir versões das ferramentas
+        run: |
+          echo "=== latexmk ==="
+          nix develop --command latexmk -v
+          echo ""
+          echo "=== lualatex ==="
+          nix develop --command lualatex --version
+
+      - name: Limpar artefatos anteriores (clean build)
+        run: |
+          git clean -xfd --exclude='.nix-*' --exclude='result' || true
+          nix develop --command latexmk -C main.tex || true
+
+      - name: Construir PDF
+        run: nix develop --command latexmk -cd main.tex
+
+      - name: Fazer upload dos artefatos
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: document-pdf
-          path: main.pdf
-
-      - name: Upload log artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: document-log
-          path: main.log
-          if-no-files-found: warn
+          name: main
+          path: |
+            *.pdf
+            *.log
