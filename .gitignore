@@ -332,3 +332,6 @@ TSWLatexianTemp*
 *.out
 *.synctex.gz
 *.toc
+
+# Direnv
+.direnv
