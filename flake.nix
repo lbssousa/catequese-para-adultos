@@ -43,6 +43,7 @@
             metre
             microtype
             natbib
+            pgf
             relsize
             setspace
             texcount

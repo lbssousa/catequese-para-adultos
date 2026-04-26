@@ -13,7 +13,7 @@
   "latex-workshop.linting.run": "onType",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.kpsewhich.enabled": true,
-  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.autoClean.run": "onFailed",
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "latex-workshop.synctex.afterBuild.enabled": true,
